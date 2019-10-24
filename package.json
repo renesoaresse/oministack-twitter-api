@@ -6,7 +6,8 @@
   "author": "Renê Soares <reenerochase@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.7.6"
   },
   "devDependencies": {
     "eslint": "^6.5.1",
