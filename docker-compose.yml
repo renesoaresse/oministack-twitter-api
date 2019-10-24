@@ -9,6 +9,7 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: twitter
       MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_DATABASE: twitter
     networks:
       - mongo-compose-network
 
