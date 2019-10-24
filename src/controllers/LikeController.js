@@ -4,7 +4,7 @@ class LikeController {
   async store (req, res) {
     const tweet = await Tweet.findById(req.params.id)
 
-    tweet.set({ likes: tweet.likes++ })
+    tweet.set({ likes: tweet.likes + 1 })
 
     await tweet.save()
 
