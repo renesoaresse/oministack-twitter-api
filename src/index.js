@@ -25,6 +25,6 @@ app.use(cors())
 app.use(express.json())
 app.use(require('./routes'))
 
-app.listen(3000, () => {
+server.listen(3000, () => {
   console.log('Server port 3000')
 })
