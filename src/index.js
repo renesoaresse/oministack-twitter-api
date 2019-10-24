@@ -3,6 +3,8 @@ const mongoose = require('mongoose')
 
 const app = express()
 
+const server = require('http').Server(app)
+
 mongoose.connect('mongodb://localhost:8081/twitter', {
   useCreateIndex: true,
   useNewUrlParser: true,
