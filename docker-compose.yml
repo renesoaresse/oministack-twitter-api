@@ -1,0 +1,17 @@
+version: "3"
+services:
+  twitter-api-db:
+    container_name: twitter-api-mongo
+    image: mongo
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: twitter
+      MONGO_INITDB_ROOT_PASSWORD: root
+    networks:
+      - mongo-compose-network
+
+networks:
+  mongo-compose-network:
+    driver: bridge
