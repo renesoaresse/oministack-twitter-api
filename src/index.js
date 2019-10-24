@@ -4,7 +4,8 @@ const mongoose = require('mongoose')
 const app = express()
 
 mongoose.connect('mongodb://twitter:root@localhost:8081/twitter', {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true
 })
 
 app.get('/', (req, res) => {
