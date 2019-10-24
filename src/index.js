@@ -8,9 +8,7 @@ mongoose.connect('mongodb://twitter:root@localhost:8081/twitter', {
   useUnifiedTopology: true
 })
 
-app.get('/', (req, res) => {
-  return res.send('Init application')
-})
+app.use(require('./routes'))
 
 app.listen(3000, () => {
   console.log('Server port 3000')
