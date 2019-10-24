@@ -2,14 +2,14 @@ version: "3"
 services:
   twitter-api-db:
     container_name: twitter-api-mongo
-    image: mongo
+    image: bitnami/mongodb:latest
     restart: always
     ports:
-      - 8081:8081
+      - 8081:27017
     environment:
-      MONGO_INITDB_ROOT_USERNAME: twitter
-      MONGO_INITDB_ROOT_PASSWORD: root
-      MONGO_INITDB_DATABASE: twitter
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./mongodb_data:/bitnami
     networks:
       - mongo-compose-network
 

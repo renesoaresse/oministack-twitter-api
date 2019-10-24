@@ -1,15 +1,17 @@
-const express = require('express')
-const mongoose = require('mongoose')
+const express = require("express");
+const mongoose = require("mongoose");
 
-const app = express()
+const app = express();
 
-mongoose.connect('mongodb://twitter:root@localhost:8081/twitter', {
+mongoose.connect("mongodb://localhost:8081/twitter", {
+  useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
-})
+});
 
-app.use(require('./routes'))
+app.use(express.json());
+app.use(require("./routes"));
 
 app.listen(3000, () => {
-  console.log('Server port 3000')
-})
+  console.log("Server port 3000");
+});
