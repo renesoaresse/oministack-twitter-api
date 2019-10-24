@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 
 const app = express()
 
@@ -18,6 +19,9 @@ app.use((req, res, next) => {
   return next()
 })
 
+app.disable('x-powered-by')
+
+app.use(cors())
 app.use(express.json())
 app.use(require('./routes'))
 
