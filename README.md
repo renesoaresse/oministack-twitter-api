@@ -29,7 +29,7 @@ docker-compose up -d
 Comando para rodar o nodemon
 
 ```
-yarn dev
+yarn start:dev
 ```
 
 ## Licença
